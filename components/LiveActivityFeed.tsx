@@ -38,19 +38,22 @@ export default function LiveActivityFeed() {
   }, []);
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
-      <div className="flex items-center justify-between gap-3">
+    <div className="glass-surface neon-outline hover-tilt relative overflow-hidden rounded-3xl p-6">
+      <div aria-hidden className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-cyan-500/12 blur-3xl" />
+      <div aria-hidden className="absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-fuchsia-500/10 blur-3xl" />
+
+      <div className="relative flex items-center justify-between gap-3">
         <h2 className="text-sm font-semibold tracking-wide text-white">
           Live activity feed (simulated)
         </h2>
         <div className="text-xs text-zinc-400">Demo / Simulation Preview Only</div>
       </div>
 
-      <ul className="mt-4 space-y-3">
+      <ul className="relative mt-5 space-y-3">
         {items.map((item) => (
           <li
             key={item.id}
-            className="flex flex-col gap-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3"
+            className="glass-surface flex flex-col gap-1 rounded-2xl px-4 py-3"
           >
             <div className="text-sm text-zinc-100">{item.message}</div>
             <div className="text-xs text-zinc-400">tx: {maskHash(item.hash)}</div>

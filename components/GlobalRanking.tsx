@@ -38,15 +38,18 @@ export default function GlobalRanking() {
   }, []);
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
-      <div className="flex items-center justify-between gap-3">
+    <div className="glass-surface neon-outline hover-tilt relative overflow-hidden rounded-3xl p-6">
+      <div aria-hidden className="absolute -right-28 top-10 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
+      <div aria-hidden className="absolute -bottom-32 left-10 h-72 w-72 rounded-full bg-cyan-500/12 blur-3xl" />
+
+      <div className="relative flex items-center justify-between gap-3">
         <h2 className="text-sm font-semibold tracking-wide text-white">
           Global ranking (simulated)
         </h2>
         <div className="text-xs text-zinc-400">random reorder</div>
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-xl border border-white/10">
+      <div className="relative mt-5 overflow-hidden rounded-2xl border border-white/10 bg-black/25">
         <table className="w-full text-left text-sm">
           <thead className="bg-white/5 text-xs uppercase tracking-widest text-zinc-400">
             <tr>

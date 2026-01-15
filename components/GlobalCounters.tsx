@@ -39,31 +39,40 @@ export default function GlobalCounters() {
   }, []);
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-        <div className="text-xs uppercase tracking-widest text-zinc-400">
-          Total users
-        </div>
-        <div className="mt-2 text-2xl font-semibold text-white">
-          {formatInt(totalUsers)}+
-        </div>
-      </div>
-
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-        <div className="text-xs uppercase tracking-widest text-zinc-400">
-          Active users
-        </div>
-        <div className="mt-2 text-2xl font-semibold text-white">
-          {formatInt(activeUsers)}
+    <div className="scene-3d grid gap-4 md:grid-cols-3">
+      <div className="glass-surface hover-tilt relative overflow-hidden rounded-3xl p-6">
+        <div aria-hidden className="absolute inset-x-6 top-6 h-px bg-gradient-to-r from-cyan-400/40 via-white/10 to-fuchsia-400/40" />
+        <div className="relative pt-3">
+          <div className="text-xs uppercase tracking-widest text-zinc-400">
+            Total users
+          </div>
+          <div className="mt-2 text-2xl font-semibold text-white">
+            {formatInt(totalUsers)}+
+          </div>
         </div>
       </div>
 
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-        <div className="text-xs uppercase tracking-widest text-zinc-400">
-          Total earnings
+      <div className="glass-surface hover-tilt relative overflow-hidden rounded-3xl p-6">
+        <div aria-hidden className="absolute inset-x-6 top-6 h-px bg-gradient-to-r from-cyan-400/40 via-white/10 to-fuchsia-400/40" />
+        <div className="relative pt-3">
+          <div className="text-xs uppercase tracking-widest text-zinc-400">
+            Active users
+          </div>
+          <div className="mt-2 text-2xl font-semibold text-white">
+            {formatInt(activeUsers)}
+          </div>
         </div>
-        <div className="mt-2 text-2xl font-semibold text-white">
-          {formatCurrencyUSD(totalEarnings)}+
+      </div>
+
+      <div className="glass-surface hover-tilt relative overflow-hidden rounded-3xl p-6">
+        <div aria-hidden className="absolute inset-x-6 top-6 h-px bg-gradient-to-r from-cyan-400/40 via-white/10 to-fuchsia-400/40" />
+        <div className="relative pt-3">
+          <div className="text-xs uppercase tracking-widest text-zinc-400">
+            Total earnings
+          </div>
+          <div className="mt-2 text-2xl font-semibold text-white">
+            {formatCurrencyUSD(totalEarnings)}+
+          </div>
         </div>
       </div>
     </div>

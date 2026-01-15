@@ -4,8 +4,14 @@ import type { ToolDefinition } from "@/lib/tools";
 
 export default function ToolCard({ tool }: { tool: ToolDefinition }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 shadow-sm">
-      <div className="flex items-start justify-between gap-4">
+    <div className="glass-surface hover-tilt group relative overflow-hidden rounded-3xl p-6">
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <div className="absolute -top-24 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-fuchsia-500/18 blur-3xl" />
+        <div className="absolute -bottom-24 left-1/4 h-56 w-56 rounded-full bg-cyan-500/18 blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent" />
+      </div>
+
+      <div className="relative flex items-start justify-between gap-4">
         <div className="flex flex-col gap-2">
           <h3 className="text-sm font-semibold tracking-wide text-white">
             {tool.name}
@@ -30,24 +36,19 @@ export default function ToolCard({ tool }: { tool: ToolDefinition }) {
         </span>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap gap-3">
         <Link
           href={tool.href}
-          className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-zinc-200"
+          className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black shadow-[0_18px_40px_rgba(0,0,0,0.32)] transition-shadow hover:bg-zinc-200 hover:shadow-[0_24px_55px_rgba(0,0,0,0.5)]"
         >
           View Live Demo
         </Link>
         <Link
           href="/dashboard"
-          className="rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
+          className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(0,0,0,0.22)] transition-colors hover:bg-white/10"
         >
           Access Dashboard
         </Link>
-      </div>
-
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-        <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-2xl" />
-        <div className="absolute -bottom-20 left-1/4 h-40 w-40 rounded-full bg-cyan-500/20 blur-2xl" />
       </div>
     </div>
   );
