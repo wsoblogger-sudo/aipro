@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import ParallaxVars from "@/components/ParallaxVars";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import BackToTop from "@/components/ui/BackToTop";
+import FloatingActions from "@/components/ui/FloatingActions";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,11 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Automated Income Suite",
+    default: "AIPROFITGEN — Automated Money Making Software",
     template: "%s",
   },
   description:
-    "Crypto money making + automated income simulation suite with AI trading software dashboards.",
+    "AIPROFITGEN — Automated Money Making Software. Premium AI-centric UI/UX with simulated dashboards, pricing widgets, and license workflows.",
   keywords: [
     "crypto money making",
     "automated income",
@@ -29,16 +31,16 @@ export const metadata: Metadata = {
     "make money online",
   ],
   openGraph: {
-    title: "Automated Income Suite",
+    title: "AIPROFITGEN — Automated Money Making Software",
     description:
-      "Unlock AI trading software dashboards, pricing widgets, and simulated automated income previews.",
+      "Premium AI-centric UI/UX with simulated dashboards, pricing widgets, and license workflows.",
     type: "website",
     images: [
       {
         url: "/og.svg",
         width: 1200,
         height: 630,
-        alt: "Automated Income Suite",
+        alt: "AIPROFITGEN",
       },
     ],
   },
@@ -64,6 +66,9 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+
+        <FloatingActions />
+        <BackToTop />
       </body>
     </html>
   );

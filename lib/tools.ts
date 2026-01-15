@@ -99,6 +99,10 @@ export const TOOLS: ToolDefinition[] = [
   },
 ];
 
+export function isToolId(id: string): id is ToolId {
+  return TOOLS.some((t) => t.id === id);
+}
+
 export function getTool(id: ToolId): ToolDefinition {
   const tool = TOOLS.find((t) => t.id === id);
   if (!tool) throw new Error(`Unknown tool: ${id}`);
