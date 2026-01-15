@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1a"/>
+      <stop offset="0.55" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="250" cy="170" r="220" fill="#a78bfa" fill-opacity="0.14"/>
+  <circle cx="920" cy="500" r="260" fill="#22d3ee" fill-opacity="0.12"/>
+  <rect x="80" y="110" width="1040" height="410" rx="32" fill="#000" fill-opacity="0.35" stroke="#fff" stroke-opacity="0.14"/>
+  <text x="140" y="230" fill="#ffffff" font-size="56" font-family="Arial, Helvetica, sans-serif" font-weight="700">AIPROFITGEN</text>
+  <text x="140" y="290" fill="#e5e7eb" font-size="26" font-family="Arial, Helvetica, sans-serif">Automated Money Making Software</text>
+  <text x="140" y="350" fill="#9ca3af" font-size="22" font-family="Arial, Helvetica, sans-serif">3D UI • dashboards • pricing widgets • licenses</text>
+  <rect x="140" y="395" width="420" height="12" rx="6" fill="url(#glow)"/>
+  <text x="140" y="455" fill="#ffffff" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Demo / Simulation Preview Only</text>
+</svg>
